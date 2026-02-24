@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd:*)",
+      "Bash(ffprobe:*)",
+      "Bash(ffmpeg:*)",
+      "WebSearch",
+      "Bash(taskkill:*)",
+      "Bash(cd /c/Users/Larissa/Desktop/agencia/viveiro-barbosa-hero && npm run lint 2>&1)",
+      "Bash(cd /c/Users/Larissa/Desktop/agencia/viveiro-barbosa-hero && npm run build 2>&1)",
+      "Bash(cd /c/Users/Larissa/Desktop/agencia/viveiro-barbosa-hero && npm run dev 2>&1)",
+      "Bash(rm -f /c/Users/Larissa/Desktop/agencia/viveiro-barbosa-hero/.next/dev/lock && cd /c/Users/Larissa/Desktop/agencia/viveiro-barbosa-hero && npm run dev 2>&1)",
+      "Bash(which gh 2>&1 && gh auth status 2>&1)",
+      "Bash(which vercel 2>&1 || npx vercel --version 2>&1)",
+      "Bash(cd /c/Users/Larissa/Desktop/agencia/viveiro-barbosa-hero && git init 2>&1)",
+      "Bash(head:*)"
+    ]
+  }
+}
