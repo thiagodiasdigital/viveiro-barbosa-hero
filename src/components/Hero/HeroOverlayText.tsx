@@ -5,10 +5,9 @@ interface HeroOverlayTextProps {
 }
 
 export function HeroOverlayText({ opacity }: HeroOverlayTextProps) {
-  const titleColor = `rgba(53, 78, 24, ${opacity})`;
-  const textSecondary = `rgba(31, 41, 55, ${opacity * 0.7})`;
-  const btnColor = `rgba(53, 78, 24, ${opacity})`;
-  const borderColor = `rgba(53, 78, 24, ${opacity})`;
+  const titleColor = `rgba(255, 255, 255, ${opacity})`;
+  const subtitleColor = `rgba(255, 255, 255, ${opacity * 0.85})`;
+  const btnGreen = `rgba(37, 211, 102, ${opacity})`;
 
   return (
     <div
@@ -16,18 +15,18 @@ export function HeroOverlayText({ opacity }: HeroOverlayTextProps) {
       aria-hidden={opacity === 0}
     >
       <div
-        className="pointer-events-auto mb-12 w-full max-w-2xl px-8 text-left md:mb-20 md:px-16 lg:px-24"
+        className="pointer-events-auto mb-20 w-full max-w-[620px] px-6 text-left md:mb-24 md:px-14 lg:px-[90px]"
         style={{ pointerEvents: opacity > 0.1 ? "auto" : "none" }}
       >
         <h2
-          className="font-[family-name:var(--font-poppins)] text-3xl font-bold leading-[1.1] tracking-normal md:text-5xl lg:text-[64px]"
+          className="font-[family-name:var(--font-poppins)] text-4xl font-bold italic leading-[1.15] tracking-normal md:text-6xl lg:text-[72px]"
           style={{ color: titleColor }}
         >
           Onde Nasce Sua Próxima Safra
         </h2>
         <p
-          className="mt-4 font-[family-name:var(--font-inter)] text-sm font-light uppercase tracking-[0.15em] md:mt-6 md:text-base"
-          style={{ color: textSecondary }}
+          className="mt-6 font-[family-name:var(--font-poppins)] text-xs font-medium uppercase tracking-[0.25em] md:mt-8 md:text-base"
+          style={{ color: subtitleColor }}
         >
           Mudas de qualidade para sua lavoura
         </p>
@@ -35,12 +34,12 @@ export function HeroOverlayText({ opacity }: HeroOverlayTextProps) {
           href="https://wa.me/5527998510542"
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-6 inline-block rounded-full px-8 py-3 font-[family-name:var(--font-inter)] text-xs font-light uppercase tracking-[0.2em] transition-colors duration-300 hover:bg-[#354E18] hover:text-[#F7F7F2] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#354E18] md:mt-8"
+          className="mt-8 inline-flex h-[50px] items-center justify-center rounded-full px-10 font-[family-name:var(--font-poppins)] text-sm font-bold uppercase tracking-[0.15em] transition-colors duration-300 hover:bg-[#25D366] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#25D366] md:mt-10"
           style={{
-            color: btnColor,
-            borderWidth: "1px",
+            color: btnGreen,
+            borderWidth: "2px",
             borderStyle: "solid",
-            borderColor: borderColor,
+            borderColor: btnGreen,
           }}
         >
           Fale no WhatsApp

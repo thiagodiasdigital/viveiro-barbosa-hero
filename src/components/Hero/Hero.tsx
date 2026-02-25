@@ -60,13 +60,13 @@ export function Hero() {
           ready={ready}
         />
 
-        {/* Gradiente sutil no rodapé para legibilidade do texto final */}
+        {/* Gradiente escuro para legibilidade do texto branco */}
         <div
           className="pointer-events-none absolute inset-0 z-[5]"
           style={{
             opacity: textOpacity,
             background:
-              "linear-gradient(to top, rgba(247,247,242,0.6) 0%, rgba(247,247,242,0.3) 20%, transparent 45%)",
+              "linear-gradient(to right, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.3) 40%, transparent 70%)",
           }}
         />
 
@@ -75,18 +75,19 @@ export function Hero() {
       </div>
 
       <noscript>
-        <div className="flex h-screen w-full flex-col items-end justify-end bg-[#F7F7F2] pb-20">
+        <div className="relative flex h-screen w-full items-center bg-black">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/sequences/hero/hero-0145.webp"
             alt="Viveiro Barbosa — Mudas de qualidade para sua lavoura"
-            className="absolute inset-0 h-full w-full object-contain"
+            className="absolute inset-0 h-full w-full object-cover"
           />
-          <div className="relative z-10 px-8 text-left md:px-16 lg:px-24">
-            <h2 className="font-[family-name:var(--font-poppins)] text-5xl font-bold text-[#354E18]">
+          <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/30 to-transparent" />
+          <div className="relative z-10 max-w-[500px] px-8 text-left md:px-16 lg:px-[150px]">
+            <h2 className="font-[family-name:var(--font-poppins)] text-5xl font-bold leading-[1.2] text-white">
               Onde Nasce Sua Próxima Safra
             </h2>
-            <p className="mt-4 font-[family-name:var(--font-inter)] text-sm font-light uppercase tracking-widest text-[rgba(31,41,55,0.6)]">
+            <p className="mt-5 font-[family-name:var(--font-poppins)] text-lg font-medium uppercase tracking-[0.08em] text-white/85">
               Mudas de qualidade para sua lavoura
             </p>
           </div>
