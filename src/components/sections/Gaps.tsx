@@ -66,7 +66,7 @@ export function Gaps() {
               >
                 <div
                   className="mb-2 font-[family-name:var(--font-instrument)] text-[3.5rem] leading-none"
-                  style={{ color: "rgba(196, 164, 108, 0.15)" }}
+                  style={{ color: "rgba(196, 164, 108, 0.3)" }}
                 >
                   {gap.num}
                 </div>
