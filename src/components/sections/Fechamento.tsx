@@ -45,7 +45,7 @@ export function Fechamento() {
 
         <Reveal delay={0.2}>
           <a
-            href="https://wa.me/5527998510542"
+            href="https://wa.me/5532998494311"
             target="_blank"
             rel="noopener noreferrer"
             className="relative inline-flex items-center gap-3 overflow-hidden rounded px-11 py-[1.1rem] text-base font-medium tracking-[0.02em] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(196,120,58,0.3)]"

@@ -31,7 +31,7 @@ export function HeroOverlayText({ opacity }: HeroOverlayTextProps) {
           Mudas de qualidade para sua lavoura
         </p>
         <a
-          href="https://wa.me/5527998510542"
+          href="https://wa.me/5532998494311"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-8 inline-flex h-[50px] items-center justify-center rounded-full px-10 font-[family-name:var(--font-poppins)] text-sm font-bold uppercase tracking-[0.15em] transition-colors duration-300 hover:bg-[#25D366] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#25D366] md:mt-10"
