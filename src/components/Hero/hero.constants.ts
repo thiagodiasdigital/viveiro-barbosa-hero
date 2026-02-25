@@ -22,6 +22,15 @@ export const HERO_CONFIG = {
   },
 } as const;
 
+/** Configuração mobile: frames 960×540 (~70% mais leves) */
+export const HERO_MOBILE = {
+  breakpoint: 768,
+  basePath: "/sequences/hero-mobile/hero-",
+  canvasWidth: 960,
+  canvasHeight: 540,
+  batchSize: 4,
+} as const;
+
 /** Configuração do modo de renderização adaptativo por faixa de frames.
  *  Calibrado frame-a-frame com o vídeo final-video-viveiro.mp4:
  *    - Frames 0–3:  Logo puro em fundo branco → contain (barras invisíveis)
@@ -40,7 +49,8 @@ export const ADAPTIVE_RENDER = {
   CONTAIN_START: 999,
 } as const;
 
-export function getFramePath(index: number): string {
+export function getFramePath(index: number, mobile = false): string {
   const num = String(index + 1).padStart(4, "0");
-  return `${HERO_CONFIG.basePath}${num}${HERO_CONFIG.extension}`;
+  const base = mobile ? HERO_MOBILE.basePath : HERO_CONFIG.basePath;
+  return `${base}${num}${HERO_CONFIG.extension}`;
 }

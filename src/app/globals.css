@@ -51,6 +51,19 @@ html.lenis body {
   overflow: hidden;
 }
 
+/* Hero loader pulse */
+@keyframes loaderPulse {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(0.97);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 /* Scroll reveal */
 .reveal {
   opacity: 0;

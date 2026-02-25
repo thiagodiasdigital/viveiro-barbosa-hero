@@ -6,6 +6,7 @@ import { useImageSequence } from "@/hooks/useImageSequence";
 import { HERO_CONFIG } from "./hero.constants";
 import { HeroCanvas } from "./HeroCanvas";
 import { HeroOverlayText } from "./HeroOverlayText";
+import { HeroLoader } from "./HeroLoader";
 import { ScrollIndicator } from "./ScrollIndicator";
 
 function clamp01(value: number): number {
@@ -31,7 +32,7 @@ function fadeRange(
 export function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
   const progress = useScrollProgress(sectionRef);
-  const { frames, ready } = useImageSequence();
+  const { frames, ready, loadProgress } = useImageSequence();
 
   const overlays = HERO_CONFIG.overlays;
 
@@ -70,6 +71,7 @@ export function Hero() {
           }}
         />
 
+        <HeroLoader progress={loadProgress} visible={!ready} />
         <ScrollIndicator opacity={scrollIndicatorOpacity} />
         <HeroOverlayText opacity={textOpacity} />
       </div>
