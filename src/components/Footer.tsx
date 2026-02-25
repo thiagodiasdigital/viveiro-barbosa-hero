@@ -1,21 +1,33 @@
-import Image from "next/image";
-
 export function Footer() {
-  const year = new Date().getFullYear();
-
   return (
-    <footer className="bg-[#1F2937] py-10">
-      <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-6 md:px-8 lg:px-12">
-        <Image
-          src="/logo-viveiro.jpg"
-          alt="Viveiro Barbosa"
-          width={120}
-          height={48}
-          className="rounded object-contain"
-        />
-        <p className="text-center text-xs text-[#F7F7F2]/50">
-          &copy; {year} Viveiro Barbosa — Mudas de qualidade para sua lavoura. Aracruz/ES.
-        </p>
+    <footer
+      className="px-8 py-16 text-center"
+      style={{
+        background: "var(--color-soil)",
+        borderTop: "1px solid rgba(196, 164, 108, 0.1)",
+      }}
+    >
+      <div
+        className="text-[0.8rem] font-medium tracking-[0.1em]"
+        style={{ color: "var(--color-sand)" }}
+      >
+        Dias Digital
+      </div>
+      <div
+        className="mt-2 text-[0.75rem] leading-[1.6]"
+        style={{ color: "rgba(196, 164, 108, 0.35)" }}
+      >
+        Estratégia de crescimento para negócios locais
+      </div>
+      <div
+        className="mx-auto my-5 h-px w-10"
+        style={{ background: "rgba(196, 164, 108, 0.15)" }}
+      />
+      <div
+        className="text-[0.7rem]"
+        style={{ color: "rgba(196, 164, 108, 0.25)" }}
+      >
+        Página desenvolvida exclusivamente para o Viveiro Barbosa &middot; {new Date().getFullYear()}
       </div>
     </footer>
   );

@@ -1,27 +1,36 @@
 @import "tailwindcss";
 
 :root {
-  --color-bg: #f7f7f2;
-  --color-text-primary: #1f2937;
-  --color-text-secondary: rgba(31, 41, 55, 0.6);
-  --color-border-btn: #354e18;
-  --color-title-accent: #354e18;
-  --color-green-light: #8ec643;
-  --color-brown: #6f4c28;
+  --color-soil: #1a1409;
+  --color-soil-warm: #2a2010;
+  --color-bark: #3d2e18;
+  --color-clay: #6b4c2a;
+  --color-sand: #c4a46c;
+  --color-cream: #f0e6d3;
+  --color-leaf: #4a6d3a;
+  --color-leaf-light: #6b9c4a;
+  --color-white: #faf7f2;
+  --color-text: #1a1409;
+  --color-text-soft: #5a4d3a;
+  --color-text-muted: #8a7d6a;
+  --color-accent: #c4783a;
+  --color-accent-warm: #d4944a;
+  --color-line: rgba(107, 76, 42, 0.15);
 }
 
 @theme inline {
-  --color-background: var(--color-bg);
-  --color-foreground: var(--color-text-primary);
-  --font-sans: var(--font-inter);
-  --font-display: var(--font-poppins);
+  --color-background: var(--color-white);
+  --color-foreground: var(--color-text);
+  --font-sans: var(--font-dm);
 }
 
 body {
-  background: var(--color-bg);
-  color: var(--color-text-primary);
-  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+  background: var(--color-white);
+  color: var(--color-text);
+  font-family: var(--font-dm), -apple-system, sans-serif;
+  line-height: 1.7;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* Lenis smooth scroll */
@@ -40,4 +49,16 @@ html.lenis body {
 
 .lenis.lenis-stopped {
   overflow: hidden;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { inter, poppins } from "@/styles/fonts";
+import { poppins, instrumentSerif, dmSans } from "@/styles/fonts";
 import { SmoothScrollProvider } from "@/providers/SmoothScrollProvider";
 import "./globals.css";
 
@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className={`${inter.variable} ${poppins.variable}`}
+        className={`${poppins.variable} ${instrumentSerif.variable} ${dmSans.variable}`}
       >
         <SmoothScrollProvider>{children}</SmoothScrollProvider>
       </body>
